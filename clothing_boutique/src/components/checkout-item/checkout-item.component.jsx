@@ -10,19 +10,19 @@ const CheckoutItem = ({cartItems, deleteItem, incrementQuanity, decrementItemFro
                 <th>Quantity</th>
                 <th>Price</th>
                 <th></th>
-            </thead>
+            </thead> 
 
          {cartItems.map(item => (
                 <tbody className="checkout-container">
                     <td><img src={item.imageUrl} alt={item.name} /></td>
                     <td>{item.name}</td>
                     <td className="quantity-div">
-                    <div className="icon" onClick={() => decrementItemFromCart(item)}>&#10094;</div>
+                    <div className="iconQuantity" onClick={() => decrementItemFromCart(item)}>⬸</div>
                     <h3>{item.quantity}</h3>
-                    <div className="icon" onClick={() => incrementQuanity(item)}>&#10095;</div>
+                    <div className="iconQuantity" onClick={() => incrementQuanity(item)}>⤑</div>
                     </td>
                     <td>{item.price}</td>
-                    <td className="icon" onClick={() => deleteItem(item)}>&#10005;</td>
+                    <td className="iconQuantity" onClick={() => deleteItem(item)}>X</td>
                </tbody>
             ))}
             </table>
