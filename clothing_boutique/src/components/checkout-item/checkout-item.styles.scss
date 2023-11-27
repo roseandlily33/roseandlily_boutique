@@ -1,0 +1,34 @@
+.checkout-title-div, thead, th{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1em;
+}
+
+th{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+.checkout-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1em;
+    margin-top: 1em;
+}
+.checkout-container td{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.checkout-container img{
+    height: 200px;
+}
+.quantity-div{
+   display: flex;
+   gap: 1em;
+   align-items: center;
+   justify-content: center;
+}
+.icon:hover{
+    color: #F8D48A;
+}
