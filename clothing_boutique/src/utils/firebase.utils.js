@@ -34,23 +34,18 @@ const firebaseConfig = {
         batch.set(docRef, object);
     });
     await batch.commit();
-    console.log('Finished the batch')
-    
   };
 
   export const getCategoriesAndDocuemnts = async() => {
     const collectionRef = collection(db, 'categories');
     const q = query(collectionRef);
     const querySnapshot = await getDocs(q);
-    console.log('Query Snapshot', querySnapshot);
     const categoryMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
         const {title, items} = docSnapshot.data();
         acc[title.toLowerCase()] = items;
         return acc;
     }, {});
-    console.log('Category Map', categoryMap);
     return categoryMap;
-
   }
 
   export const auth = getAuth();
@@ -64,7 +59,6 @@ const firebaseConfig = {
     }
     const userDocRef = doc(db, 'users', userAuth.uid);
     const userSnapshot = await getDoc(userDocRef);
-    console.log('User snapshot', userSnapshot, userSnapshot.exists());
     if(!userSnapshot.exists()){
         const {displayName, email } = userAuth;
         const createdAt = new Date();
