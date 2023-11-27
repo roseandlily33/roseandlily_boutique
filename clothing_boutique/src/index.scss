@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+   --headerFont: 'Cinzel Decorative', serif;
+   --mainFont: 'Cormorant Garamond', serif;
+   --black: #463636;
+   --white: #ffffff;
+   --teal: #227777;
+   --yellow: #f5ba45;
+}
+
+h1{
+    font-family: var(--headerFont);
+    color: var(--teal);
+    
+}
+h2{
+    font-family: var(--mainFont);
+    color: var(--black);
+    font-weight: 600;
+}
+h3,h4, h5, h6{
+    font-family: var(--mainFont);
+    color: var(--black);
+    font-weight: 400;
+}
+p{
+    font-family: var(--mainFont);
+    color: var(--black);
+    font-weight: 700;
+}
+a{
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1.25em;
+}
+a:hover{
+    color: var(--yellow);
+}
+h1:hover{
+    text-emphasis: none;
+}
+button{
+    padding: 1em;
+    border: none;
+    background-color: var(--teal);
+    color: var(--white);
+    border-radius: 8px;
+    font-weight: 500;
+    width: 50%;
+    opacity: 0.7;
+}
+button:hover{
+    background-color: var(--yellow);
+    color: var(--white);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+form input{
+    border: none;
+    border-bottom: 8px double var(--teal);
+    border-left: 8px double var(--teal);
+    border-bottom-left-radius: 4px;
+    padding: 0.7em;
+}
+hr{
+    border: 1px solid var(--black);
+    margin-bottom: 1em;
+}
+.title{
+    text-align: center;
+    font-weight: bold;
+}
+.icon{
+    height: 35px;
+    position: absolute;
+    top: 1.4em;
+};
